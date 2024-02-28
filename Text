@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Window</title>
+<script>
+  function openWindow() {
+    // Get form values
+    var width = document.getElementById("width").value;
+    var height = document.getElementById("height").value;
+    var left = document.getElementById("left").value;
+    var top = document.getElementById("top").value;
+    var fileName = document.getElementById("fileName").value;
+
+    // Open new window with specified dimensions and position
+    window.open(fileName, "_blank", "width=" + width + ", height=" + height + ", left=" + left + ", top=" + top);
+  }
+</script>
+</head>
+<body>
+  <h1>Open a New Window</h1>
+  <form>
+    <label for="width">Width:</label>
+    <input type="text" id="width" name="width"><br><br>
+    
+    <label for="height">Height:</label>
+    <input type="text" id="height" name="height"><br><br>
+    
+    <label for="left">Left Position:</label>
+    <input type="text" id="left" name="left"><br><br>
+    
+    <label for="top">Top Position:</label>
+    <input type="text" id="top" name="top"><br><br>
+    
+    <label for="fileName">File Name:</label>
+    <input type="text" id="fileName" name="fileName"><br><br>
+    
+    <button type="button" onclick="openWindow()">Open Window</button>
+  </form>
+</body>
+</html>
